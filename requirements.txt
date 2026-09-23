@@ -1,0 +1,15 @@
+# Core agent
+llama-index-core>=0.12
+llama-index-llms-openai>=0.3
+llama-index-embeddings-openai>=0.3
+openai>=1.60
+pydantic>=2.7
+python-dotenv>=1.0
+
+# Web UI
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# Optional: local Qwen backend (LLM_BACKEND=ollama)
+llama-index-llms-ollama>=0.5
+llama-index-embeddings-huggingface>=0.5
