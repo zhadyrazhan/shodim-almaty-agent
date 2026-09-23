@@ -130,12 +130,22 @@ reward-модель, ни reference-модель в памяти, поэтому
 **Нужен GPU.** Runtime → Change runtime type → **T4 GPU**, затем Runtime → **Restart session** \
 (смена типа без перезапуска не переносит сессию на GPU). Секции 1-4 выше работают и на CPU: \
 если GPU нет, ячейки ниже сами себя пропустят."""),
-    code("""import torch
+    code("""import subprocess
+import torch
 
 HAS_GPU = torch.cuda.is_available()
 print("CUDA available:", HAS_GPU)
+
 if HAS_GPU:
     print("GPU:", torch.cuda.get_device_name(0))
+    # Ставим только здесь, а не в секции 0: это ~2 ГБ пакетов, которые нужны
+    # исключительно для ORPO. На CPU-прогоне секций 1-4 они только мешают.
+    print("ставим зависимости для обучения...")
+    subprocess.run(
+        "pip install -q unsloth unsloth_zoo trl peft accelerate bitsandbytes datasets".split(),
+        check=True,
+    )
+    print("готово")
 else:
     print("GPU нет — секция 5 будет пропущена")"""),
     md("""### 5.1 Датасет предпочтений
