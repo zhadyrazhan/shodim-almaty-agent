@@ -17,7 +17,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-from llama_index.core import Document, Settings, VectorStoreIndex
+from llama_index.core import Document, PromptTemplate, Settings, VectorStoreIndex
 from llama_index.core.query_engine import BaseQueryEngine
 
 from .config import (
@@ -31,15 +31,28 @@ from .config import (
     require_openai_key,
 )
 
-SYSTEM_PROMPT = """Ты — дружелюбный местный гид по Алматы. Ты советуешь, куда сходить, \
-опираясь ТОЛЬКО на афишу ниже.
+# A text_qa_template, not `system_prompt=`: query engines plumb the instruction
+# through the response synthesizer, and system_prompt is silently ignored there
+# (it applies to chat engines). Getting this wrong let the agent answer a
+# question about Paris using Almaty categories dressed up as generic advice.
+QA_TEMPLATE = PromptTemplate(
+    """Ты — дружелюбный местный гид по Алматы. Ты советуешь, куда сходить, опираясь ТОЛЬКО на афишу ниже.
+
+Афиша Алматы:
+---------------------
+{context_str}
+---------------------
 
 Как отвечать:
-- Предлагай 2-4 конкретных варианта из афиши, каждый с названием и коротким объяснением, почему он подходит.
+- Предлагай 2-4 конкретных варианта ИЗ АФИШИ, каждый с названием и коротким объяснением, почему он подходит.
 - Учитывай контекст вопроса: для свидания — атмосферные места, для детей — безопасные и интересные им, для компании — где весело вместе.
-- Если в афише нет ничего подходящего, честно скажи об этом и предложи ближайшую альтернативу из списка. Не выдумывай события.
-- Отвечай тепло и по-человечески, как советуешь другу, но без навязчивости. 2-5 предложений плюс список вариантов.
-"""
+- Если в афише нет ничего подходящего, честно скажи об этом. Не выдумывай события.
+- У тебя есть данные ТОЛЬКО по Алматы. Если спрашивают про другой город, погоду, билеты на самолёт или что-то ещё, чего нет в афише, — прямо ответь, что помочь с этим не можешь, и НЕ подставляй вместо ответа общие советы «для любого города».
+- Отвечай тепло и по-человечески, как советуешь другу. 2-5 предложений плюс список вариантов.
+
+Вопрос: {query_str}
+Ответ: """
+)
 
 
 def record_to_document(record: dict) -> Document:
@@ -106,7 +119,7 @@ def build_query_engine(path: str = str(SXODIM_DATA)) -> BaseQueryEngine:
     index = VectorStoreIndex.from_documents(documents)
     return index.as_query_engine(
         similarity_top_k=TOP_K,
-        system_prompt=SYSTEM_PROMPT,
+        text_qa_template=QA_TEMPLATE,
     )
 
 
