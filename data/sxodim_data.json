@@ -2,12 +2,12 @@
   {
     "title": "Большой летний фестиваль 2026",
     "kind": "event",
-    "description": "4 июля в 17:00, Место проведения будет объявлено позже",
+    "description": "Фестиваль; 4 июля в 17:00, Место проведения будет объявлено позже",
     "category": "фестиваль",
     "url": "https://sxodim.com/almaty/event/bolshoy-letniy-festival-2026",
     "date": "4 июля в 17:00",
     "price": "",
-    "address": "",
+    "address": "Место проведения будет объявлено позже",
     "good_for": [
       "компания друзей",
       "семья"
@@ -16,21 +16,20 @@
   {
     "title": "Batyr Amanaty",
     "kind": "event",
-    "description": "30 апреля в 19:00, Алматы Арена",
+    "description": "Концерт; 30 апреля в 19:00",
     "category": "концерт",
     "url": "https://sxodim.com/almaty/event/batyr-amanaty-zh-ne-kameraly-orkestr-lken-tribyut-koncert",
     "date": "30 апреля в 19:00",
     "price": "",
     "address": "Almaty Arena, мкр. Нуркент, 7",
     "good_for": [
-      "компания друзей",
-      "свидание"
+      "компания друзей"
     ]
   },
   {
     "title": "Музыкальный фестиваль NonStop Music Fest",
     "kind": "event",
-    "description": "3 мая в 19:00, Almaty Arena",
+    "description": "Музыкальный фестиваль; 3 мая в 19:00",
     "category": "фестиваль",
     "url": "https://sxodim.com/almaty/event/muzykalnyy-festival-nonstop-music-fest",
     "date": "3 мая в 19:00",
@@ -44,8 +43,8 @@
   {
     "title": "«Кездесейік тағы бір» поэзия кеші",
     "kind": "event",
-    "description": "5000 теңге, 28 сентября в 20:00",
-    "category": "поэзия / концерт",
+    "description": "Поэтический вечер",
+    "category": "концерт",
     "url": "https://sxodim.com/almaty/event/kezdeseyik-ta-y-bir-poeziya-keshi",
     "date": "28 сентября в 20:00",
     "price": "5000 теңге",
@@ -58,7 +57,7 @@
   {
     "title": "Концерт Гиорги Гигашвили в Алматы",
     "kind": "event",
-    "description": "от 25 000 тенге, 6 февраля в 19:00, Almaty Theatre",
+    "description": "Концерт",
     "category": "концерт",
     "url": "https://sxodim.com/almaty/event/koncert-giorgi-gigashvili-v-almaty",
     "date": "6 февраля в 19:00",
@@ -72,21 +71,20 @@
   {
     "title": "Ваня Дмитриенко в Алматы",
     "kind": "event",
-    "description": "от 15 000 тенге, 7 ноября в 20:00, Almaty Arena",
+    "description": "Концерт",
     "category": "концерт",
     "url": "https://sxodim.com/almaty/event/vanya-dmitrienko-v-almaty",
     "date": "7 ноября в 20:00",
     "price": "от 15 000 тенге",
     "address": "Almaty Arena, мкр. Нуркент, 7",
     "good_for": [
-      "компания друзей",
-      "свидание"
+      "компания друзей"
     ]
   },
   {
     "title": "Концерт группы CUPSIZE",
     "kind": "event",
-    "description": "от 18 000 тенге, 1 ноября в 20:00, Motor Club Almaty",
+    "description": "Концерт",
     "category": "концерт",
     "url": "https://sxodim.com/almaty/event/koncert-gruppy-cupsize",
     "date": "1 ноября в 20:00",
@@ -99,7 +97,7 @@
   {
     "title": "Вечерний кинопоказ под открытым небом",
     "kind": "event",
-    "description": "от 2500 тенге, 19 сентября - 27 сентября, Open Cinema Almaty",
+    "description": "Кинопоказы; 19 сентября - 27 сентября",
     "category": "кинопоказ",
     "url": "https://sxodim.com/almaty/event/vecherniy-kinopokaz-pod-otkrytym-nebom",
     "date": "19 сентября - 27 сентября",
@@ -108,83 +106,39 @@
     "good_for": [
       "семья",
       "компания друзей",
-      "одному"
+      "свидание"
     ]
   },
   {
     "title": "Выступление Kreator",
     "kind": "event",
-    "description": "",
+    "description": "Концерт; 18 ноября в 19:00",
     "category": "концерт",
-    "url": "https://sxodim.com/almaty/kontserty/vystuplenie-kreator/tickets",
-    "date": "",
-    "price": "",
-    "address": "",
-    "good_for": [
-      "компания друзей"
-    ]
-  },
-  {
-    "title": "Выступление Kreator",
-    "kind": "event",
-    "description": "Концерт Kreator",
-    "category": "",
     "url": "https://sxodim.com/almaty/event/vystuplenie-kreator",
     "date": "18 ноября в 19:00",
     "price": "30 000 тенге",
     "address": "Бакшасарай, ул. Тимирязева, 42",
     "good_for": [
-      "компания друзей",
-      "одному"
+      "компания друзей"
     ]
   },
   {
     "title": "Nickol. The Art Of Hair 2026 – Barbering",
     "kind": "event",
-    "description": "Барбер-конкурс/мероприятие по стрижке и оформлению волос",
-    "category": "",
+    "description": "Конкурс/мероприятие по барберингу",
+    "category": "конкурс",
     "url": "https://sxodim.com/almaty/event/nickol-the-art-of-hair-2026-barbering",
     "date": "4 ноября в 10:00",
     "price": "от 30 000 тенге",
     "address": "Forum, Event Space, ул. Сейфуллина, 617 (5 этаж)",
     "good_for": [
-      "компания друзей",
-      "одному"
-    ]
-  },
-  {
-    "title": "Роспись керамики «Всё включено»",
-    "kind": "event",
-    "description": "Мастер-класс по росписи керамики",
-    "category": "",
-    "url": "https://sxodim.com/almaty/event/rospis-keramiki-vse-vklyucheno",
-    "date": "24 сентября - 31 октября",
-    "price": "от 10 000 тенге",
-    "address": "Творческая академия «Яблоко», ул. Айманова, 126, офис 405",
-    "good_for": [
-      "дети",
-      "семья"
-    ]
-  },
-  {
-    "title": "Урок по керамике «Все включено»",
-    "kind": "event",
-    "description": "Урок по керамике (мастер-класс)",
-    "category": "",
-    "url": "https://sxodim.com/almaty/event/urok-po-keramike-vse-vklyucheno",
-    "date": "24 сентября - 31 октября",
-    "price": "от 10 000 тенге",
-    "address": "Творческая академия «Яблоко», ул. Айманова, 126, офис 405",
-    "good_for": [
-      "дети",
-      "семья",
-      "одному"
+      "компания друзей"
     ]
   },
   {
     "title": "Индивидуальная экскурсия «Чарынский и Чёрный каньоны, озёра Кольсай и Каинды»",
     "kind": "event",
-    "description": "Индивидуальная экскурсия по Чарынскому каньону, Черному каньону и озёрам Кольсай и Каинды",
+    "description": "180 000 тенге за группу из 5 человек, 8 июля - 31 декабря, Чарынский каньон",
     "category": "Туризм",
     "url": "https://sxodim.com/almaty/event/individualnaya-ekskursiya-charynskiy-i-chernyy-kanony-ozera-kolsay-i-kaindy",
     "date": "8 июля - 31 декабря",
@@ -198,12 +152,12 @@
   {
     "title": "Экскурсия «Чарынский и Чёрный каньоны, озёра Кольсай и Каинды» (мини-группа)",
     "kind": "event",
-    "description": "Экскурсия в мини-группе по Чарынскому и Чёрному каньонам, озёрам Кольсай и Каинды",
+    "description": "39 000 тенге, 8 июля - 31 декабря, Место сбора: АЗС Compass, пр. Суюнбая, 114",
     "category": "Туризм",
     "url": "https://sxodim.com/almaty/event/ekskursiya-charynskiy-i-chernyy-kanony-ozera-kolsay-i-kaindy-mini-gruppa",
     "date": "8 июля - 31 декабря",
     "price": "39 000 тенге",
-    "address": "Место сбора: АЗС Compass, пр. Суюнбая, 114",
+    "address": "АЗС Compass, пр. Суюнбая, 114",
     "good_for": [
       "компания друзей",
       "семья"
@@ -212,12 +166,12 @@
   {
     "title": "Групповая экскурсия «Чарынский и Чёрный каньоны, озёра Кольсай и Каинды»",
     "kind": "event",
-    "description": "Групповая экскурсия по Чарынскому и Чёрному каньонам, озёрам Кольсай и Каинды",
+    "description": "27 500 тенге, 8 июля - 31 декабря, Место сбора: АЗС Compass, пр. Суюнбая, 114",
     "category": "Туризм",
     "url": "https://sxodim.com/almaty/event/gruppovaya-ekskursiya-charynskiy-i-chernyy-kanony-ozera-kolsay-i-kaindy",
     "date": "8 июля - 31 декабря",
     "price": "27 500 тенге",
-    "address": "Место сбора: АЗС Compass, пр. Суюнбая, 114",
+    "address": "АЗС Compass, пр. Суюнбая, 114",
     "good_for": [
       "компания друзей",
       "семья"
@@ -226,7 +180,7 @@
   {
     "title": "Тур «Водопад Текес и озеро Тузколь»",
     "kind": "event",
-    "description": "Тур к водопаду Текес и озеру Тузколь",
+    "description": "225 000 тенге, 29 июля - 31 декабря, Алматинская область, Райымбекский район, Водопад Текес",
     "category": "Туры от Melon Travel",
     "url": "https://sxodim.com/almaty/event/tur-vodopad-tekes-i-ozero-tuzkol",
     "date": "29 июля - 31 декабря",
@@ -240,7 +194,7 @@
   {
     "title": "Тур «Озера Каинды, Кольсай, Черный и Чарынский каньоны»",
     "kind": "event",
-    "description": "Тур по озеру Каинды, Кольсай и каньонам",
+    "description": "от 16 000 тенге, 29 июля - 31 декабря, озеро Каинды",
     "category": "Туры от Melon Travel",
     "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-ozera-kaindy-kolsay-chernyy-i-charynskiy-kanony",
     "date": "29 июля - 31 декабря",
@@ -254,22 +208,22 @@
   {
     "title": "Индивидуальная экскурсия «Озера Кольсай, Каинды, Чарынский и Черный каньоны»",
     "kind": "event",
-    "description": "Индивидуальная экскурсия по озерам Кольсай, Каинды, а также Чарынскому и Черному каньонам. Место встречи: ваш отель в черте города.",
-    "category": "тур",
+    "description": "160 000 тенге (за группу до 5 человек), 13 сентября - 31 декабря, Место встречи: ваш отель в черте города",
+    "category": "Туры от Melon Travel",
     "url": "https://sxodim.com/almaty/event/individualnaya-ekskursiya-ozera-kolsay-kaindy-charynskiy-i-chernyy-kanony",
     "date": "13 сентября - 31 декабря",
     "price": "160 000 тенге (за группу до 5 человек)",
     "address": "Место встречи: ваш отель в черте города",
     "good_for": [
-      "компания друзей",
-      "семья"
+      "семья",
+      "компания друзей"
     ]
   },
   {
     "title": "Тур «Озеро Кайынды и озеро Кольсай за 1 день»",
     "kind": "event",
-    "description": "Однодневный тур к озеру Каинды и озеру Кольсай.",
-    "category": "тур",
+    "description": "160 000 тенге, 29 июля - 31 декабря, Алматинская область, Кегенский район, озеро Каинды",
+    "category": "Туры от Melon Travel",
     "url": "https://sxodim.com/almaty/event/tur-ozero-kayyndy-i-ozero-kolsay-za-1-den",
     "date": "29 июля - 31 декабря",
     "price": "160 000 тенге",
@@ -280,10 +234,38 @@
     ]
   },
   {
-    "title": "Enjoyers Travel",
-    "kind": "place",
+    "title": "Тур «Чарынский каньон, Черный и Лунный каньоны»",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "Туры от Melon Travel",
+    "url": "https://sxodim.com/almaty/event/avtomobilnyy-tur-dusha-charyna-lunnyy-chernyy-i-charynskiy-kanony",
+    "date": "",
+    "price": "",
+    "address": "",
+    "good_for": [
+      "компания друзей",
+      "семья"
+    ]
+  },
+  {
+    "title": "Тур на внедорожниках «Алтын Эмель – Поющий Бархан»",
+    "kind": "event",
+    "description": "Тур на внедорожниках к Национальному природному парку Алтын-Эмель с посещением Поющего Бархана.",
+    "category": "туры/экскурсии",
+    "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-altyn-emel-poyushchiy-barhan",
+    "date": "29 июля - 31 декабря",
+    "price": "от 49 000 тенге",
+    "address": "ГНПП Алтын-Эмель",
+    "good_for": [
+      "компания друзей",
+      "семья"
+    ]
+  },
+  {
+    "title": "Enjoyers Travel",
+    "kind": "event",
+    "description": "",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/enjoyers-travel-tours",
     "date": "",
     "price": "",
@@ -295,9 +277,9 @@
   },
   {
     "title": "Melon Travel",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/melon-travel-tours",
     "date": "",
     "price": "",
@@ -309,9 +291,9 @@
   },
   {
     "title": "JEEPTRIP",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/tury-ot-jeeptrip",
     "date": "",
     "price": "",
@@ -323,9 +305,9 @@
   },
   {
     "title": "Grande Voyage",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/grand-voyage-tours",
     "date": "",
     "price": "",
@@ -337,9 +319,9 @@
   },
   {
     "title": "Fenix Tour",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/fenix-tour-tours",
     "date": "",
     "price": "",
@@ -351,9 +333,9 @@
   },
   {
     "title": "ALTRAVEL",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/altravel-tours",
     "date": "",
     "price": "",
@@ -365,9 +347,9 @@
   },
   {
     "title": "Blast Tour",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/blast-tour-tours",
     "date": "",
     "price": "",
@@ -379,9 +361,9 @@
   },
   {
     "title": "MOCEAN Travel",
-    "kind": "place",
+    "kind": "event",
     "description": "",
-    "category": "туры",
+    "category": "",
     "url": "https://sxodim.com/almaty/events/mocean-travel-tours",
     "date": "",
     "price": "",
@@ -402,29 +384,29 @@
     "address": "",
     "good_for": [
       "одному",
-      "компания друзей"
+      "свидание"
     ]
   },
   {
     "title": "Мастер-классы",
     "kind": "event",
-    "description": "",
-    "category": "мастер-классы",
+    "description": "Мастер-классы",
+    "category": "мастер-класс",
     "url": "https://sxodim.com/almaty/events/master-klass",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
+      "семья",
       "дети",
-      "компания друзей",
-      "семья"
+      "компания друзей"
     ]
   },
   {
     "title": "Дегустации школы «О, Вино!»",
     "kind": "event",
     "description": "Дегустации школы «О, Вино!»",
-    "category": "дегустации",
+    "category": "дегустация",
     "url": "https://sxodim.com/almaty/events/degustatsii-shkoly-o-vino",
     "date": "",
     "price": "",
@@ -436,7 +418,7 @@
   },
   {
     "title": "Punch StandUp Club — события",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "События от Punch StandUp Club",
     "category": "стендап",
     "url": "https://sxodim.com/almaty/events/punch-standup-club",
@@ -444,12 +426,13 @@
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
     "title": "Almaty Stand Up — мероприятия",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "Мероприятия от Almaty Stand Up",
     "category": "стендап",
     "url": "https://sxodim.com/almaty/events/meropriyatiya-ot-almaty-stand-up",
@@ -457,12 +440,13 @@
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
     "title": "Alau Comedy Space — события",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "События от Alau Comedy Space",
     "category": "комедия",
     "url": "https://sxodim.com/almaty/events/sobytiya-v-alau-comedy-space",
@@ -470,12 +454,13 @@
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
     "title": "Stand Up Camp — события",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "События от Stand Up Camp",
     "category": "стендап",
     "url": "https://sxodim.com/almaty/events/sobytiya-ot-stand-up-camp",
@@ -483,12 +468,13 @@
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
     "title": "Almaty Central Stand Up Club — события",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "События в Almaty Central Stand Up Club",
     "category": "стендап",
     "url": "https://sxodim.com/almaty/events/central-standup-almaty",
@@ -496,12 +482,13 @@
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
     "title": "INTELLIGENTNO QU — события",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "События в INTELLIGENTNO QU",
     "category": "развлечения",
     "url": "https://sxodim.com/almaty/events/sobytiya-v-intelligentno-qu",
@@ -514,9 +501,9 @@
   },
   {
     "title": "Lep Club — события",
-    "kind": "place",
+    "kind": "entertainment",
     "description": "События в Lep Club",
-    "category": "развлечения",
+    "category": "клуб",
     "url": "https://sxodim.com/almaty/events/sobytiya-v-lep-club",
     "date": "",
     "price": "",
@@ -529,28 +516,28 @@
     "title": "Table 7 — события",
     "kind": "place",
     "description": "События от Table 7",
-    "category": "мероприятия",
+    "category": "ресторан/бар",
     "url": "https://sxodim.com/almaty/events/sobytiya-ot-table-7",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей",
-      "свидание"
+      "свидание",
+      "компания друзей"
     ]
   },
   {
     "title": "Oi-Qaragai — мероприятия",
     "kind": "place",
     "description": "Мероприятия в Oi-Qaragai",
-    "category": "мероприятия",
+    "category": "место",
     "url": "https://sxodim.com/almaty/events/meropriyatiya-v-oi-qaragai",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей",
-      "семья"
+      "семья",
+      "компания друзей"
     ]
   },
   {
@@ -583,13 +570,13 @@
     ]
   },
   {
-    "title": "Абзал Утешов Алматыда (концерт)",
+    "title": "Абзал Утешов Алматыда (26 қыркүйек, 16:00)",
     "kind": "event",
     "description": "Концерт Абзала Утешова",
-    "category": "Концерты",
+    "category": "концерт",
     "url": "https://sxodim.com/almaty/event/abzal-uteshovty-koncerti",
     "date": "26 сентября в 16:00",
-    "price": "от 4 000 тенг",
+    "price": "от 4000 теңге",
     "address": "Республика сарайы, Достық даңғылы, 56",
     "good_for": [
       "компания друзей",
@@ -598,25 +585,25 @@
     ]
   },
   {
-    "title": "Джаз-сюита «Щелкунчик» в исполнении Большого джазового оркестра",
+    "title": "Джаз-сюита «Щелкунчик» в исполнении Большого джазового оркестра (19 декабря, 20:00)",
     "kind": "event",
-    "description": "Концерт джазовой сюиты",
-    "category": "Концерты",
+    "description": "Джазовый концерт — джаз-версия «Щелкунчика»",
+    "category": "концерт",
     "url": "https://sxodim.com/almaty/event/dzhaz-syuita-shchelkunchik-v-ispolnenii-bolshogo-dzhazovogo-orkestra-19-dekabrya-20-00",
     "date": "19 декабря в 20:00",
     "price": "от 18 000 тенге",
     "address": "Almaty Theatre, пр. Аль-Фараби, 30",
     "good_for": [
       "свидание",
-      "семья",
-      "одному"
+      "компания друзей",
+      "семья"
     ]
   },
   {
     "title": "Концерт группы PIZZA",
     "kind": "event",
-    "description": "Концерт группы PIZZA",
-    "category": "Концерты",
+    "description": "Концерт рок/поп-группы PIZZA",
+    "category": "концерт",
     "url": "https://sxodim.com/almaty/event/koncert-gruppy-pizza",
     "date": "19 ноября в 20:00",
     "price": "21 000 тенге",
@@ -627,10 +614,10 @@
     ]
   },
   {
-    "title": "Импровизационный вечер – Тілеген Еркінбек пен Аңсаған Садирханов",
+    "title": "Импровизациялық кеш – Тілеген Еркінбек пен Аңсаған Садирханов",
     "kind": "event",
-    "description": "Импровизационный стендап/вечер",
-    "category": "Stand Up",
+    "description": "Импровизационный стендап-кеш",
+    "category": "standup",
     "url": "https://sxodim.com/almaty/event/improvizaciyaly-kesh-tilegen-erkinbek-pen-a-sa-an-sadirhanov",
     "date": "",
     "price": "",
@@ -644,26 +631,26 @@
     "title": "Спектакль «Моя последняя любовь»",
     "kind": "event",
     "description": "Театральный спектакль",
-    "category": "Театр",
+    "category": "театр",
     "url": "https://sxodim.com/almaty/event/spektakl-moya-poslednyaya-lyubov",
     "date": "25 сентября в 19:00",
     "price": "от 12 000 тенге",
     "address": "Студенческий театр Concordia, ул. Богенбай Батыра, 151 (уг. Масанчи)",
     "good_for": [
       "свидание",
-      "семья",
-      "одному"
+      "компания друзей",
+      "семья"
     ]
   },
   {
     "title": "Киноужин «Сумерки» от VkusKino",
     "kind": "event",
-    "description": "Киноужин (кинопоказ с ужином) — фильм «Сумерки»",
-    "category": "Киноужины",
+    "description": "Киноужин — показ фильма «Сумерки» с ужином от VkusKino",
+    "category": "",
     "url": "https://sxodim.com/almaty/event/spec-kinouzhin-na-hellouin-sumerki-ot-vkuskino",
-    "date": "",
-    "price": "",
-    "address": "",
+    "date": "27 сентября и 4 октября",
+    "price": "от 22 500 тенге",
+    "address": "Ресторан Рис/Караван, ул. Назарбаева, 273",
     "good_for": [
       "свидание",
       "компания друзей"
@@ -672,7 +659,7 @@
   {
     "title": "Концерт LUCAVEROS в Алматы",
     "kind": "event",
-    "description": "Концерт LUCAVEROS в Алматы",
+    "description": "Концерт LUCAVEROS",
     "category": "концерт",
     "url": "https://sxodim.com/almaty/event/koncert-lucaveros-v-almaty",
     "date": "24 октября в 19:00",
@@ -686,21 +673,22 @@
   {
     "title": "Концерт группы «Дурной Вкус»",
     "kind": "event",
-    "description": "Концерт группы «Дурной Вкус»",
-    "category": "концерт",
+    "description": "Концерт группы",
+    "category": "Концерты",
     "url": "https://sxodim.com/almaty/event/koncert-gruppy-durnoy-vkus",
     "date": "2 октября в 19:00",
     "price": "от 15 000 тенге",
     "address": "Клуб «Жесть», ул. Розыбакиева, 236",
     "good_for": [
-      "компания друзей"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
     "title": "Кубок по дрифту FIA Central Asia Drifting Cup 2026",
     "kind": "event",
-    "description": "Кубок по дрифту FIA Central Asia Drifting Cup 2026",
-    "category": "спорт / соревнование",
+    "description": "Соревнование по дрифту",
+    "category": "Спорт",
     "url": "https://sxodim.com/almaty/event/kubok-po-driftu-fia-central-asia-drifting-cup-2026",
     "date": "25 сентября - 27 сентября",
     "price": "от 8000 тенге",
@@ -713,7 +701,7 @@
   {
     "title": "Детский мастер-класс по приготовлению пиццы в Dodo Pizza",
     "kind": "event",
-    "description": "Детский мастер-класс по приготовлению пиццы в Dodo Pizza",
+    "description": "Детский мастер-класс по приготовлению пиццы",
     "category": "мастер-класс",
     "url": "https://sxodim.com/almaty/event/master-klass-po-prigotovleniyu-piccy-v-dodo-pizza",
     "date": "15 сентября - 30 сентября",
@@ -727,8 +715,8 @@
   {
     "title": "Family day в Family space",
     "kind": "event",
-    "description": "Семейное мероприятие — Family day",
-    "category": "детям",
+    "description": "Семейный день в Family space",
+    "category": "мероприятие",
     "url": "https://sxodim.com/almaty/event/family-day-v-family-space",
     "date": "23 сентября - 25 сентября",
     "price": "от 3000 тенге",
@@ -741,8 +729,8 @@
   {
     "title": "Мультимедийная арт-галерея Catharsis",
     "kind": "place",
-    "description": "Мультимедийная арт-галерея — выставка",
-    "category": "выставка",
+    "description": "Мультимедийная арт-галерея",
+    "category": "выставки",
     "url": "https://sxodim.com/almaty/event/multimediynaya-art-galereya-catharsis",
     "date": "10 сентября - 27 сентября",
     "price": "от 2500 тенге",
@@ -750,13 +738,13 @@
     "good_for": [
       "свидание",
       "одному",
-      "семья"
+      "компания друзей"
     ]
   },
   {
     "title": "Музейная арт-терапия",
     "kind": "event",
-    "description": "Арт-терапия в музее — мастер-класс",
+    "description": "Арт-терапия в Творческой академии «Яблоко»",
     "category": "мастер-класс",
     "url": "https://sxodim.com/almaty/event/muzeynaya-art-terapiya",
     "date": "24 сентября и 29 октября",
@@ -764,56 +752,82 @@
     "address": "Творческая академия «Яблоко», ул. Айманова, 126, офис 405",
     "good_for": [
       "одному",
-      "семья"
-    ]
-  },
-  {
-    "title": "Teztap интеллектуалдар ойыны – Классика (24 қыркүйек)",
-    "kind": "event",
-    "description": "Интеллектуальная игра (квиз) Teztap",
-    "category": "развлечение",
-    "url": "https://sxodim.com/almaty/event/teztap-intellektualdar-oyyny-klassika-6-tamyz",
-    "date": "24 сентября в 19:30",
-    "price": "3000 теңге",
-    "address": "Pinta, Әуезов, 84А",
-    "good_for": [
-      "компания друзей",
-      "одному"
+      "компания друзей"
     ]
   },
   {
     "title": "Квиз, плиз! #908",
     "kind": "event",
-    "description": "",
-    "category": "развлечение",
+    "description": "Интеллектуальная квиз-игра",
+    "category": "развлечения",
     "url": "https://sxodim.com/almaty/event/kviz-pliz-908",
-    "date": "",
-    "price": "",
-    "address": "",
+    "date": "24 сентября в 19:30",
+    "price": "3500 тенге",
+    "address": "Mad Murphy`s Irish Pub, ул. Казыбек би, 65",
+    "good_for": [
+      "компания друзей"
+    ]
+  },
+  {
+    "title": "Teztap интеллектуалдар ойыны – Классика (24 қыркүйек)",
+    "kind": "event",
+    "description": "Интеллектуальная игра Teztap",
+    "category": "развлечения",
+    "url": "https://sxodim.com/almaty/event/teztap-intellektualdar-oyyny-klassika-6-tamyz",
+    "date": "24 сентября в 19:30",
+    "price": "3000 теңге",
+    "address": "Pinta, Әуезов, 84А",
+    "good_for": [
+      "компания друзей"
+    ]
+  },
+  {
+    "title": "Волшебный киноопыт: Гарри Поттер и Философский Камень от vkuskino в Алматы",
+    "kind": "event",
+    "description": "Киноужин с показом фильма",
+    "category": "киноужин",
+    "url": "https://sxodim.com/almaty/event/kinouzhin-s-filmom-garri-potter-i-filosovskiy-kamen",
+    "date": "19 августа - 1 октября",
+    "price": "от 23 500 тенге",
+    "address": "Ресторан Пенка, ул. Сейфуллина, 574/6",
+    "good_for": [
+      "свидание",
+      "компания друзей"
+    ]
+  },
+  {
+    "title": "Посвящение Джуди Гарленд и Лайзе Минелли – Джаз, проверенный временем (24 сентября)",
+    "kind": "event",
+    "description": "Джазовый концерт в EverJazz",
+    "category": "концерт",
+    "url": "https://sxodim.com/almaty/event/posvyashchenie-dzhudi-garlend-i-layze-minelli-dzhaz-proverennyy-vremenem-2",
+    "date": "24 сентября в 20:00",
+    "price": "4000 – 7000 тенге",
+    "address": "Джаз-клуб EverJazz, ул. Жандосова, 1/1",
+    "good_for": [
+      "свидание",
+      "компания друзей"
+    ]
+  },
+  {
+    "title": "Стендап-концерт «Новые шутки» (by Stand Up Camp)",
+    "kind": "event",
+    "description": "Стендап-концерт",
+    "category": "",
+    "url": "https://sxodim.com/almaty/event/stendap-koncert-novye-shutki-by-stand-up-camp-82",
+    "date": "24 сентября в 21:00",
+    "price": "3500 тенге",
+    "address": "Harats pub, пр. Аль-Фараби, 7к5а",
     "good_for": [
       "компания друзей",
       "одному"
     ]
   },
   {
-    "title": "Волшебный киноопыт: Гарри Поттер и Философский Камень от vkuskino в Алматы",
-    "kind": "event",
-    "description": "Киноужин с показом фильма «Гарри Поттер и Философский Камень\"",
-    "category": "развлечение",
-    "url": "https://sxodim.com/almaty/event/kinouzhin-s-filmom-garri-potter-i-filosovskiy-kamen",
-    "date": "19 августа - 1 октября",
-    "price": "от 23 500 тенге",
-    "address": "Ресторан Пенка, ул. Сейфуллина, 574/6",
-    "good_for": [
-      "компания друзей",
-      "семья"
-    ]
-  },
-  {
-    "title": "Клуб at-travel — Конные туры и выездки",
+    "title": "Конные туры и выездки клуба at-travel",
     "kind": "entertainment",
-    "description": "Правила пользования услугой «Конные туры и выездки» клуба at-travel: инструкция по допуску, ограничения (беременные, дети до 7 лет, вес свыше 110 кг и т.д.), режим работы и ответственность.",
-    "category": "",
+    "description": "Правила пользования услугой конных туров: условия участия, ограничения (дети младше 7 лет, беременные и т.д.), режим работы и рекомендации по одежде.",
+    "category": "спорт / активный отдых",
     "url": "",
     "date": "",
     "price": "",
@@ -835,7 +849,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -849,7 +863,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -862,8 +876,9 @@
     "price": "",
     "address": "",
     "good_for": [
+      "семья",
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -877,7 +892,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -891,7 +906,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -905,7 +920,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -919,7 +934,8 @@
     "address": "",
     "good_for": [
       "семья",
-      "компания друзей"
+      "компания друзей",
+      "одному"
     ]
   },
   {
@@ -933,11 +949,11 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
-    "title": "Театр 2act",
+    "title": "2act",
     "kind": "place",
     "description": "Спектакли в театре 2act",
     "category": "театр",
@@ -947,7 +963,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -961,7 +977,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -974,8 +990,9 @@
     "price": "",
     "address": "",
     "good_for": [
+      "семья",
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1003,7 +1020,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1035,7 +1052,7 @@
     ]
   },
   {
-    "title": "Театр ARTиШОК",
+    "title": "ARTиШОК",
     "kind": "place",
     "description": "Спектакли в театре ARTиШОК",
     "category": "театр",
@@ -1045,7 +1062,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1059,7 +1076,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1073,7 +1090,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1087,7 +1104,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1101,7 +1118,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1115,7 +1132,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1129,7 +1146,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1143,7 +1160,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "одному"
     ]
   },
   {
@@ -1157,14 +1174,15 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
+      "свидание",
+      "одному"
     ]
   },
   {
     "title": "Almaty Arena",
     "kind": "place",
     "description": "Мероприятия в Almaty Arena",
-    "category": "арена/концерты",
+    "category": "арена",
     "url": "https://sxodim.com/almaty/events/meropriyatiya-v-almaty-arena",
     "date": "",
     "price": "",
@@ -1192,7 +1210,7 @@
     "title": "EverJazz",
     "kind": "place",
     "description": "Концерты в EverJazz",
-    "category": "концертный зал",
+    "category": "клуб",
     "url": "https://sxodim.com/almaty/events/koncerty-v-everjazz",
     "date": "",
     "price": "",
@@ -1206,7 +1224,7 @@
     "title": "Музкафе",
     "kind": "place",
     "description": "Концерты в «Музкафе»",
-    "category": "кафе/концерты",
+    "category": "кафе/клуб",
     "url": "https://sxodim.com/almaty/events/kontserty-v-muzkafe",
     "date": "",
     "price": "",
@@ -1220,15 +1238,14 @@
     "title": "Аквапарки и бассейны",
     "kind": "place",
     "description": "Категория: Аквапарки и бассейны",
-    "category": "аквапарк/бассейн",
+    "category": "активный отдых",
     "url": "https://sxodim.com/almaty/places/aquapark",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "дети",
       "семья",
-      "компания друзей"
+      "дети"
     ]
   },
   {
@@ -1242,15 +1259,14 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья",
-      "одному"
+      "семья"
     ]
   },
   {
     "title": "Загородный отдых",
     "kind": "place",
     "description": "Категория: Загородный отдых",
-    "category": "загородный отдых",
+    "category": "отдых",
     "url": "https://sxodim.com/almaty/places/countryside",
     "date": "",
     "price": "",
@@ -1261,92 +1277,85 @@
     ]
   },
   {
-    "title": "Кафе и рестораны",
+    "title": "Кафе и рестораны (категория)",
     "kind": "place",
     "description": "Категория: Кафе и рестораны",
-    "category": "кафе/ресторан",
+    "category": "еда",
     "url": "https://sxodim.com/almaty/places/cafe",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
       "свидание",
-      "компания друзей",
-      "семья"
+      "компания друзей"
     ]
   },
   {
-    "title": "Кинотеатры",
+    "title": "Кинотеатры (категория)",
     "kind": "place",
     "description": "Категория: Кинотеатры",
-    "category": "кинотеатр",
+    "category": "кино",
     "url": "https://sxodim.com/almaty/places/cinema",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "свидание",
-      "компания друзей",
       "семья",
-      "одному"
+      "компания друзей",
+      "свидание"
     ]
   },
   {
-    "title": "Красота и здоровье",
+    "title": "Красота и здоровье (категория)",
     "kind": "place",
     "description": "Категория: Красота и здоровье",
-    "category": "красота и здоровье",
+    "category": "услуги",
     "url": "https://sxodim.com/almaty/places/beauty-health",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "одному",
-      "семья"
+      "одному"
     ]
   },
   {
-    "title": "Музеи",
+    "title": "Музеи (категория)",
     "kind": "place",
     "description": "Категория: Музеи",
-    "category": "музей",
+    "category": "музеи",
     "url": "https://sxodim.com/almaty/places/museums",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
       "семья",
-      "одному",
-      "компания друзей"
+      "одному"
     ]
   },
   {
-    "title": "Отели",
+    "title": "Отели (категория)",
     "kind": "place",
     "description": "Категория: Отели",
-    "category": "отель",
+    "category": "гостиницы",
     "url": "https://sxodim.com/almaty/places/hotels",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "семья",
-      "компания друзей"
+      "семья"
     ]
   },
   {
-    "title": "Парки, скверы и аллеи",
+    "title": "Парки, скверы и аллеи (категория)",
     "kind": "place",
     "description": "Категория: Парки, скверы и аллеи",
-    "category": "парк",
+    "category": "парки",
     "url": "https://sxodim.com/almaty/places/parks",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
       "семья",
-      "дети",
-      "одному",
       "компания друзей"
     ]
   },
@@ -1361,8 +1370,7 @@
     "address": "",
     "good_for": [
       "семья",
-      "компания друзей",
-      "свидание"
+      "компания друзей"
     ]
   },
   {
@@ -1375,15 +1383,15 @@
     "price": "",
     "address": "",
     "good_for": [
-      "одному",
+      "дети",
       "семья"
     ]
   },
   {
-    "title": "Библиотеки",
+    "title": "Библиотеки (категория)",
     "kind": "place",
     "description": "Категория: Библиотеки",
-    "category": "библиотека",
+    "category": "культура",
     "url": "https://sxodim.com/almaty/places/biblioteki-",
     "date": "",
     "price": "",
@@ -1394,10 +1402,10 @@
     ]
   },
   {
-    "title": "Коворкинги",
+    "title": "Коворкинги (категория)",
     "kind": "place",
     "description": "Категория: Коворкинги",
-    "category": "коворкинг",
+    "category": "работа",
     "url": "https://sxodim.com/almaty/places/coworkings",
     "date": "",
     "price": "",
@@ -1411,7 +1419,7 @@
     "title": "Для детей (места)",
     "kind": "place",
     "description": "Категория: Для детей (места)",
-    "category": "детям",
+    "category": "дети",
     "url": "https://sxodim.com/almaty/places/dlja-detej",
     "date": "",
     "price": "",
@@ -1432,29 +1440,28 @@
     "address": "",
     "good_for": [
       "компания друзей",
-      "семья",
-      "дети"
+      "семья"
     ]
   },
   {
     "title": "Прокат снаряжения",
     "kind": "place",
-    "description": "Прокат снаряжения",
+    "description": "Прокат снаряжения (услуга/место)",
     "category": "услуги",
     "url": "https://sxodim.com/almaty/places/prokat-snaryazheniya",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "одному",
-      "компания друзей"
+      "компания друзей",
+      "одному"
     ]
   },
   {
     "title": "Ночная жизнь",
     "kind": "place",
-    "description": "Ночная жизнь",
-    "category": "развлечения",
+    "description": "Категория — ночная жизнь (списки баров/клубов)",
+    "category": "ночная жизнь",
     "url": "https://sxodim.com/almaty/places/night_life",
     "date": "",
     "price": "",
@@ -1464,38 +1471,38 @@
     ]
   },
   {
-    "title": "Кондитерская",
+    "title": "Кондитерская (категория)",
     "kind": "place",
-    "description": "Кондитерская",
-    "category": "еда",
+    "description": "Категория — кондитерские",
+    "category": "кондитерская",
     "url": "https://sxodim.com/almaty/places/konditerskaya",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "свидание",
-      "семья"
+      "семья",
+      "дети"
     ]
   },
   {
-    "title": "Антикафе",
+    "title": "Антикафе (категория)",
     "kind": "place",
-    "description": "Антикафе",
-    "category": "кофейня/пространство",
+    "description": "Категория — антикафе",
+    "category": "антикафе",
     "url": "https://sxodim.com/almaty/places/anticafe",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "одному",
-      "компания друзей"
+      "компания друзей",
+      "одному"
     ]
   },
   {
-    "title": "Караоке",
+    "title": "Караоке (категория)",
     "kind": "place",
-    "description": "Караоке",
-    "category": "развлечения",
+    "description": "Категория — караоке",
+    "category": "караоке",
     "url": "https://sxodim.com/almaty/places/karaoke",
     "date": "",
     "price": "",
@@ -1505,68 +1512,65 @@
     ]
   },
   {
-    "title": "Бары",
+    "title": "Бары (категория)",
     "kind": "place",
-    "description": "Бары",
-    "category": "ночная жизнь",
+    "description": "Категория — бары",
+    "category": "бары",
     "url": "https://sxodim.com/almaty/places/bars",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "компания друзей",
-      "свидание"
+      "компания друзей"
     ]
   },
   {
-    "title": "Рестораны",
+    "title": "Рестораны (категория)",
     "kind": "place",
-    "description": "Рестораны",
-    "category": "еда",
+    "description": "Категория — рестораны",
+    "category": "рестораны",
     "url": "https://sxodim.com/almaty/places/restaurants",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
-      "свидание",
       "семья",
-      "компания друзей"
+      "свидание"
     ]
   },
   {
-    "title": "Кофейни",
+    "title": "Кофейни (категория)",
     "kind": "place",
-    "description": "Кофейни",
-    "category": "кофе",
+    "description": "Категория — кофейни",
+    "category": "кофейни",
     "url": "https://sxodim.com/almaty/places/coffee-house",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
       "одному",
-      "свидание"
+      "компания друзей"
     ]
   },
   {
-    "title": "SPA-центры",
+    "title": "SPA-центры (категория)",
     "kind": "place",
-    "description": "SPA-центры",
-    "category": "релакс",
+    "description": "Категория — SPA-центры",
+    "category": "SPA",
     "url": "https://sxodim.com/almaty/places/SPA-center",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
       "семья",
-      "одному",
       "свидание"
     ]
   },
   {
     "title": "Парк развлечений Alem Park",
-    "kind": "place",
-    "description": "Парк развлечений семейного отдыха",
-    "category": "парк и т.п.",
+    "kind": "entertainment",
+    "description": "",
+    "category": "развлечения (места)",
     "url": "https://sxodim.com/almaty/place/park-semeynogo-otdyha-alem-park",
     "date": "",
     "price": "3 750 - 4 500 ₸",
@@ -1580,7 +1584,7 @@
   {
     "title": "Бассейн Shah Pool & Spa",
     "kind": "place",
-    "description": "Бассейн и спа",
+    "description": "",
     "category": "аквапарки и бассейны",
     "url": "https://sxodim.com/almaty/place/basseyn-shah-pool-spa",
     "date": "",
@@ -1588,14 +1592,14 @@
     "address": "ул. Хан-Шатыра, 287/1а (пересечение пр. Рыскулова и пр. Момышулы)",
     "good_for": [
       "семья",
-      "одному",
-      "компания друзей"
+      "дети",
+      "одному"
     ]
   },
   {
     "title": "«Дом на Барибаева 36»: гид по арт-пространству в Алматы",
     "kind": "place",
-    "description": "Арт-пространство",
+    "description": "",
     "category": "развлечения (места)",
     "url": "https://sxodim.com/almaty/place/dom-na-baribaeva",
     "date": "",
@@ -1610,7 +1614,7 @@
   {
     "title": "Домики в горах «МегаДача»",
     "kind": "place",
-    "description": "Загородный отдых, домики в горах",
+    "description": "",
     "category": "загородный отдых",
     "url": "https://sxodim.com/almaty/place/megadacha",
     "date": "",
@@ -1624,7 +1628,7 @@
   {
     "title": "Заявка на индивидуальный тур",
     "kind": "place",
-    "description": "Форма/место для заказа индивидуального тура",
+    "description": "",
     "category": "туризм",
     "url": "https://sxodim.com/almaty/place/zayavka-na-individualnyy-tur",
     "date": "",
@@ -1638,7 +1642,7 @@
   {
     "title": "Мультимедийная ​арт-галерея Catharsis",
     "kind": "place",
-    "description": "Мультимедийная арт-галерея",
+    "description": "",
     "category": "выставки",
     "url": "https://sxodim.com/almaty/place/multimediynaya-art-galereya-catharsis",
     "date": "",
@@ -1653,7 +1657,7 @@
   {
     "title": "Музей в Французском доме в Алматы",
     "kind": "place",
-    "description": "Музей",
+    "description": "",
     "category": "музеи",
     "url": "https://sxodim.com/almaty/place/muzey-v-francuzskom-dome-v-almaty",
     "date": "",
@@ -1666,23 +1670,22 @@
   },
   {
     "title": "Галерея 101 dump gallery",
-    "kind": "place",
-    "description": "Художественная галерея",
+    "kind": "entertainment",
+    "description": "",
     "category": "развлечения (места)",
     "url": "https://sxodim.com/almaty/place/galereya-101-dump-gallery",
     "date": "",
     "price": "",
     "address": "Алматы, улица Панфилова, 101",
     "good_for": [
-      "свидание",
-      "компания друзей",
-      "одному"
+      "одному",
+      "компания друзей"
     ]
   },
   {
     "title": "Almaty Museum of Arts",
     "kind": "place",
-    "description": "Музей искусств",
+    "description": "",
     "category": "музеи",
     "url": "https://sxodim.com/almaty/place/almaty-museum-of-arts",
     "date": "",
@@ -1696,7 +1699,7 @@
   {
     "title": "Стендап клуб Punch StandUp Club",
     "kind": "entertainment",
-    "description": "Клуб стендапа",
+    "description": "",
     "category": "развлечения (места)",
     "url": "https://sxodim.com/almaty/place/punch-standup-club",
     "date": "",
@@ -1711,14 +1714,13 @@
     "title": "Udivi Almaty",
     "kind": "entertainment",
     "description": "",
-    "category": "Развлечения (места)",
+    "category": "развлечения (места)",
     "url": "https://sxodim.com/almaty/place/udivi-almaty",
     "date": "",
-    "price": "26 000 - 99 000 ₸",
-    "address": "ул. Жандосова 58/1, 3 этаж (вход со стороны Айманова)",
+    "price": "",
+    "address": "",
     "good_for": [
-      "компания друзей",
-      "семья"
+      "компания друзей"
     ]
   },
   {
@@ -1739,14 +1741,15 @@
     "title": "Музыкальный театр Stages",
     "kind": "place",
     "description": "",
-    "category": "Театр",
+    "category": "театр",
     "url": "https://sxodim.com/almaty/place/muzykalnyy-teatr-stages",
     "date": "",
     "price": "",
     "address": "",
     "good_for": [
       "свидание",
-      "семья"
+      "семья",
+      "одному"
     ]
   },
   {
@@ -1765,7 +1768,7 @@
   },
   {
     "title": "Консультация детского психолога от центра ZERBALA",
-    "kind": "place",
+    "kind": "event",
     "description": "",
     "category": "Для детей (места)",
     "url": "https://sxodim.com/almaty/place/konsultaciya-detskogo-psihologa-ot-centra-zerbala",
@@ -1788,6 +1791,7 @@
     "address": "",
     "good_for": [
       "компания друзей",
+      "семья",
       "одному"
     ]
   },
@@ -1807,7 +1811,7 @@
   },
   {
     "title": "Кофейня «Гастроном»",
-    "kind": "restaurant",
+    "kind": "place",
     "description": "",
     "category": "Кофейни",
     "url": "https://sxodim.com/almaty/place/kofeynya-gastronom",
@@ -1830,57 +1834,31 @@
     "price": "",
     "address": "Алматы, микрорайон Керемет, 3к1",
     "good_for": [
+      "свидание",
       "одному",
-      "семья"
+      "компания друзей"
     ]
   },
   {
-    "title": "Тур «Чарынский каньон, Черный и Лунный каньоны»",
-    "kind": "event",
-    "description": "Автомобильный тур по Чарынскому, Черному и Лунному каньонам.",
-    "category": "Туры от Melon Travel",
-    "url": "https://sxodim.com/almaty/event/avtomobilnyy-tur-dusha-charyna-lunnyy-chernyy-i-charynskiy-kanony",
-    "date": "29 июля - 31 декабря",
-    "price": "от 24 000 тенге",
-    "address": "Чарынский каньон",
+    "title": "Клуб at-travel — Конные туры и выездки",
+    "kind": "entertainment",
+    "description": "Услуга \"Конные туры и выездки\" с правилами пользования: требования к участникам, режим работы, инструкция и ограничения (дети до 7 лет не допускаются, беременные и т.д.).",
+    "category": "развлечения",
+    "url": "",
+    "date": "",
+    "price": "",
+    "address": "",
     "good_for": [
       "компания друзей",
-      "семья"
-    ]
-  },
-  {
-    "title": "Тур на внедорожниках «Алтын Эмель – Поющий Бархан»",
-    "kind": "event",
-    "description": "Тур на внедорожниках в национальный парк Алтын-Эмель с посещением Поющего Бархана.",
-    "category": "Туры от Melon Travel",
-    "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-altyn-emel-poyushchiy-barhan",
-    "date": "29 июля - 31 декабря",
-    "price": "от 49 000 тенге",
-    "address": "ГНПП Алтын-Эмель",
-    "good_for": [
-      "компания друзей",
-      "семья"
-    ]
-  },
-  {
-    "title": "Тур «Озеро Каинды, Чарынский каньон и Черный каньон»",
-    "kind": "event",
-    "description": "Тур на внедорожниках к озеру Каинды и каньонам.",
-    "category": "Туры от Melon Travel",
-    "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-ozero-kaindy-kanony-chernyy-i-charynskiy",
-    "date": "29 июля - 31 декабря",
-    "price": "от 34 000 тенге",
-    "address": "Озеро Каинды",
-    "good_for": [
-      "компания друзей",
-      "семья"
+      "семья",
+      "одному"
     ]
   },
   {
     "title": "Тур «Озеро Кольсай, Чарынский каньон и Черный каньон»",
     "kind": "event",
-    "description": "Тур на внедорожниках к озеру Кольсай, Чарынскому и Черному каньонам.",
-    "category": "туры",
+    "description": "Тур на озера и каньоны, старт у Озера Кольсай.",
+    "category": "тур",
     "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-ozero-kolsay-chernyy-i-charynskiy-kanony",
     "date": "29 июля - 31 декабря",
     "price": "от 29 000 тенге",
@@ -1891,14 +1869,14 @@
     ]
   },
   {
-    "title": "Тур «Национальный парк Алтын Эмель: горы Актау и Катутау»",
+    "title": "Тур «Озеро Каинды, Чарынский каньон и Черный каньон»",
     "kind": "event",
-    "description": "Тур в Государственный национальный природный парк Алтын-Эмель с посещением гор Актау и Катутау.",
-    "category": "туры",
-    "url": "https://sxodim.com/almaty/event/tur-nacionalnyy-park-altyn-emel-gory-aktau-i-katutau",
+    "description": "Тур на внедорожниках к озеру Каинды и каньонам.",
+    "category": "тур",
+    "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-ozero-kaindy-kanony-chernyy-i-charynskiy",
     "date": "29 июля - 31 декабря",
-    "price": "210 000 тенге",
-    "address": "область Жетысу, Государственный национальный природный парк Алтын-Эмель",
+    "price": "от 34 000 тенге",
+    "address": "Озеро Каинды",
     "good_for": [
       "компания друзей",
       "семья"
@@ -1907,12 +1885,68 @@
   {
     "title": "Тур «Чарынский каньон, Долина замков и река Чарын»",
     "kind": "event",
-    "description": "Тур с посещением Чарынского каньона, Долины замков и реки Чарын.",
-    "category": "туры",
+    "description": "Тур до Чарынского каньона, Долины замков и реки Чарын. Группа до 5 человек, старт от отеля или аэропорта.",
+    "category": "тур",
     "url": "https://sxodim.com/almaty/event/tur-charynskiy-kanon-dolina-zamkov-i-reka-charyn",
     "date": "14 сентября - 31 декабря",
     "price": "100 000 тенге (группа до 5 человек)",
     "address": "Место сбора: старт от вашего отеля (в черте города) или аэропорта",
+    "good_for": [
+      "компания друзей",
+      "семья"
+    ]
+  },
+  {
+    "title": "Тур «Тайны Танбалы: путешествие к петроглифам ЮНЕСКО в сердце Центральной Азии»",
+    "kind": "event",
+    "description": "Тур к петроглифам Танбалы (объект ЮНЕСКО).",
+    "category": "тур",
+    "url": "https://sxodim.com/almaty/event/tur-tayny-tanbaly-puteshestvie-k-petroglifam-yunesko-v-serdce-centralnoy-azii",
+    "date": "",
+    "price": "",
+    "address": "",
+    "good_for": [
+      "компания друзей",
+      "семья"
+    ]
+  },
+  {
+    "title": "Тур «Озеро Иссык и водопад Медвежий»",
+    "kind": "event",
+    "description": "Тур на внедорожниках к озеру Иссык и водопаду Медвежий; место сбора: старт от отеля или аэропорта.",
+    "category": "туры",
+    "url": "https://sxodim.com/almaty/event/tur-na-vnedorozhnikah-ozero-issyk-i-vodopad-medvezhiy",
+    "date": "13 сентября - 31 декабря",
+    "price": "100 000 тенге",
+    "address": "(старт от вашего отеля или аэропорта)",
+    "good_for": [
+      "компания друзей",
+      "семья"
+    ]
+  },
+  {
+    "title": "Тур «Национальный парк Алтын Эмель: горы Актау и Катутау»",
+    "kind": "event",
+    "description": "Тур по Государственному национальному природному парку Алтын-Эмель с посещением гор Актау и Катутау.",
+    "category": "туры",
+    "url": "https://sxodim.com/almaty/event/tur-nacionalnyy-park-altyn-emel-gory-aktau-i-katutau",
+    "date": "29 июля - 31 декабря",
+    "price": "27 000 тенге",
+    "address": "область Жетысу, Государственный национальный природный парк Алтын-Эмель",
+    "good_for": [
+      "компания друзей",
+      "семья"
+    ]
+  },
+  {
+    "title": "Тур «Чарынский каньон: в Долину Замков до реки Чарын»",
+    "kind": "event",
+    "description": "Тур к Чарынскому каньону и Долине Замков с выходом к реке Чарын.",
+    "category": "туры",
+    "url": "https://sxodim.com/almaty/event/tur-charynskiy-kanon-v-dolinu-zamkov-do-reki-charyn",
+    "date": "29 июля - 31 декабря",
+    "price": "210 000 тенге",
+    "address": "Алматинская область, Енбекшиказахский район, каньон Чарын",
     "good_for": [
       "компания друзей",
       "семья"
