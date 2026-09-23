@@ -121,21 +121,121 @@ for q, a in answers.items():
     "".join(lines), encoding="utf-8"
 )
 print(f"сохранено {len(answers)} диалогов в agent_examples.md")"""),
-    md("""## 5. Скачать результаты
+    md("""## 5. Бонус: ORPO — делаем ответы дружелюбнее
+
+Базовый агент отвечает корректно, но суховато. ORPO (Odds Ratio Preference Optimization) \
+объединяет SFT и выравнивание по предпочтениям в один проход: не нужны ни отдельная \
+reward-модель, ни reference-модель в памяти, поэтому всё помещается на бесплатный T4.
+
+**Нужен GPU.** Runtime → Change runtime type → **T4 GPU**, затем Runtime → **Restart session** \
+(смена типа без перезапуска не переносит сессию на GPU). Секции 1-4 выше работают и на CPU: \
+если GPU нет, ячейки ниже сами себя пропустят."""),
+    code("""import torch
+
+HAS_GPU = torch.cuda.is_available()
+print("CUDA available:", HAS_GPU)
+if HAS_GPU:
+    print("GPU:", torch.cuda.get_device_name(0))
+else:
+    print("GPU нет — секция 5 будет пропущена")"""),
+    md("""### 5.1 Датасет предпочтений
+
+ORPO нужны тройки (prompt, chosen, rejected). Обе стороны генерируются на **одних и тех же** \
+записях афиши: `chosen` — тёплый ответ живым языком, `rejected` — сухая справка списком. \
+Факты одинаковые, отличается только тон, значит модель учится именно стилю, а не содержанию.
+
+Шаг идёт через OpenAI API и GPU не требует."""),
+    code("""if HAS_GPU:
+    !python training/build_preference_data.py --n 120"""),
+    code('''from pathlib import Path
+
+if HAS_GPU:
+    pairs = json.loads(Path("data/preference_data.json").read_text(encoding="utf-8"))
+    print(f"пар: {len(pairs)}")
+    p = pairs[0]
+    print("\\nВОПРОС:", p["prompt"])
+    print("\\n--- CHOSEN (тёплый) ---")
+    print(p["chosen"][:500])
+    print("\\n--- REJECTED (сухой) ---")
+    print(p["rejected"][:500])'''),
+    md("### 5.2 Ответы ДО обучения"),
+    code('''if HAS_GPU:
+    from unsloth import FastLanguageModel
+
+    BASE_MODEL = "unsloth/Qwen2.5-3B-Instruct-bnb-4bit"
+    model, tok = FastLanguageModel.from_pretrained(
+        model_name=BASE_MODEL, max_seq_length=2048, load_in_4bit=True
+    )
+
+    def gen(m, t, question, max_new_tokens=220):
+        prompt = t.apply_chat_template(
+            [{"role": "user", "content": question}],
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+        inputs = t([prompt], return_tensors="pt").to("cuda")
+        out = m.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+        return t.decode(out[0][inputs.input_ids.shape[1]:], skip_special_tokens=True).strip()
+
+    FastLanguageModel.for_inference(model)
+    before = {q: gen(model, tok, q) for q in TEST_QUESTIONS[:3]}
+    for q, a in before.items():
+        print(f"Q: {q}\\nA: {a}\\n{'-' * 70}")'''),
+    md("""### 5.3 Обучение
+
+Следим не только за падением loss, но и за **`rewards/margins`**: именно рост маржи \
+показывает, что модель разводит тёплый и сухой ответы, а не просто подгоняется под оба."""),
+    code("""if HAS_GPU:
+    !python training/train_orpo.py --pairs data/preference_data.json --epochs 3"""),
+    md("### 5.4 Ответы ПОСЛЕ обучения"),
+    code('''if HAS_GPU:
+    from peft import PeftModel
+
+    tuned, tuned_tok = FastLanguageModel.from_pretrained(
+        model_name=BASE_MODEL, max_seq_length=2048, load_in_4bit=True
+    )
+    tuned = PeftModel.from_pretrained(tuned, "outputs/orpo-almaty")
+    FastLanguageModel.for_inference(tuned)
+
+    after = {q: gen(tuned, tuned_tok, q) for q in TEST_QUESTIONS[:3]}
+    for q, a in after.items():
+        print(f"Q: {q}\\nA: {a}\\n{'-' * 70}")'''),
+    md("""### 5.5 Сравнение ДО / ПОСЛЕ
+
+Главный артефакт бонусной части: видно ли, что тон стал теплее."""),
+    code('''if HAS_GPU:
+    import pandas as pd
+
+    df = pd.DataFrame(
+        [{"вопрос": q, "ДО": before[q][:180], "ПОСЛЕ": after[q][:180]} for q in before]
+    )
+    pd.set_option("display.max_colwidth", 180)
+    display(df)
+
+    lines = ["# ORPO: ответы до и после\\n"]
+    for q in before:
+        lines.append(f"\\n## {q}\\n\\n**До:**\\n\\n{before[q]}\\n\\n**После:**\\n\\n{after[q]}\\n")
+    Path("orpo_examples.md").write_text("".join(lines), encoding="utf-8")
+    print("\\nсохранено в orpo_examples.md")'''),
+    md("""## 6. Скачать результаты
 
 Файлы лежат внутри runtime и исчезнут вместе с сессией, поэтому забери их сразу. \
 Сам ноутбук скачивается отдельно: File → Download → Download .ipynb — **после** того, \
 как все ячейки отработали, чтобы выводы сохранились."""),
-    code('''ARTIFACTS = ["agent_examples.md", "data/sxodim_data.json"]
+    code('''from pathlib import Path
+
+ARTIFACTS = ["agent_examples.md", "data/sxodim_data.json", "orpo_examples.md"]
 
 if IN_COLAB:
     from google.colab import files
 
     for path in ARTIFACTS:
-        files.download(path)
+        # orpo_examples.md only exists if section 5 ran (needs a GPU).
+        if Path(path).exists():
+            files.download(path)
+        else:
+            print(f"{path}: пропущен (не создан)")
 else:
-    from pathlib import Path
-
     for path in ARTIFACTS:
         p = Path(path)
         print(f"{path}: {'есть' if p.exists() else 'НЕТ'}"

@@ -16,7 +16,7 @@ Ask it *"where should I go this weekend?"* or *"suggest a date spot"* and it ans
 | Structuring | **GPT-5-mini** + Pydantic structured output | Typed records straight out of noisy markdown, no regex parsing |
 | Retrieval | **LlamaIndex** `VectorStoreIndex` | Small dataset, in-memory index, no vector DB to operate |
 | Generation | **GPT-5-mini** (default) or **Qwen via Ollama** | Swap with one env var; the Ollama path needs no API key at all |
-| UI | FastAPI + vanilla JS | Dark/light theme, no build step |
+| UI | FastAPI + vanilla JS | Dark-mode chat, no build step |
 
 ### Two interchangeable backends
 
@@ -75,7 +75,7 @@ Now Runtime → Run all. Scraping and extraction take a few minutes (57 chunks t
 
 ### ORPO training (bonus)
 
-Open **`orpo_training.ipynb`** in Colab — it's self-contained (clones the repo, installs everything, checks the GPU) and walks the whole bonus track: preference pairs → training → before/after comparison.
+Section 5 of `sxodim_agent.ipynb` covers the whole bonus track: preference pairs → training → before/after comparison. The cells self-skip when no GPU is present, so sections 1–4 still run on CPU.
 
 Runtime → Change runtime type → **T4 GPU**, then Runtime → **Restart session**. Changing the type alone doesn't move you onto GPU hardware; the notebook's second cell fails loudly if you skip the restart, because Colab silently hands you CPU when you're over quota.
 
@@ -123,12 +123,13 @@ Records are deduplicated by URL, since the same event appears on several pages.
 
 ## Web UI
 
-Dark mode by default, with a light theme toggle that respects `prefers-color-scheme` and remembers your choice in `localStorage`.
+Dark mode, no theme switching.
 
 - Clickable starter questions from the project brief
-- Live status pill showing record count and active backend (`154 мест · openai`)
 - Typing indicator, graceful in-chat error messages
 - Responsive down to phone width
+
+`GET /api/health` reports record count and active backend if you want to check the server without opening a browser.
 
 ---
 
@@ -145,8 +146,15 @@ Dark mode by default, with a light theme toggle that respects `prefers-color-sch
 │   ├── scraper.py           # Jina Reader
 │   ├── extract.py           # markdown -> typed records
 │   └── agent.py             # LlamaIndex RAG
+├── evals/
+│   └── run_eval.py          # golden-set eval harness
+├── tests/                   # pytest suite
+├── training/
+│   ├── build_preference_data.py
+│   └── train_orpo.py        # ORPO bonus
 ├── scripts/
-│   └── build_notebook.py    # regenerates the notebook from source
+│   ├── build_notebook.py    # regenerates the notebook from source
+│   └── restore_outputs.py   # re-attaches saved outputs after regeneration
 └── webapp/
     ├── server.py
     └── static/              # dark-mode chat UI
@@ -166,17 +174,29 @@ The notebook imports from `src/` rather than duplicating logic, and `scripts/bui
 | Данные структурированы (JSON) | `src/extract.py` → `data/sxodim_data.json` |
 | Агент отвечает на вопросы | `src/agent.py`, notebook section 3 |
 | Код запускается, логика понятна | Quickstart above |
-| Бонус: ORPO / дружелюбность | see the `feat/sft-orpo` branch |
+| Бонус: ORPO / дружелюбность | `training/`, notebook section 5 |
 
 ---
 
 ## Branches
 
-Work is split so each piece can be reviewed on its own:
+Work was split so each piece could be reviewed on its own, then merged into `main` via PRs:
 
 | Branch | Contents |
 |---|---|
-| `main` | scraper, extractor, agent, web UI, notebook |
 | `feat/tests` | pytest suite |
 | `feat/evals` | golden set + eval harness |
-| `feat/sft-orpo` | SFT and ORPO fine-tuning for friendlier answers (bonus) |
+| `feat/sft-orpo` | ORPO fine-tuning for friendlier answers (bonus) |
+
+All three are merged; `main` has everything.
+
+---
+
+## Tests and evals
+
+```bash
+pytest                    # 27 unit tests, no API calls
+python evals/run_eval.py  # golden set — needs the agent running
+```
+
+The golden set deliberately avoids asserting specific event names, since listings change daily. It checks behavior that must hold regardless: answers come from the data, the audience changes the answer (no bars for the kid question), and off-topic questions get declined.
