@@ -121,6 +121,25 @@ for q, a in answers.items():
     "".join(lines), encoding="utf-8"
 )
 print(f"сохранено {len(answers)} диалогов в agent_examples.md")"""),
+    md("""## 5. Скачать результаты
+
+Файлы лежат внутри runtime и исчезнут вместе с сессией, поэтому забери их сразу. \
+Сам ноутбук скачивается отдельно: File → Download → Download .ipynb — **после** того, \
+как все ячейки отработали, чтобы выводы сохранились."""),
+    code('''ARTIFACTS = ["agent_examples.md", "data/sxodim_data.json"]
+
+if IN_COLAB:
+    from google.colab import files
+
+    for path in ARTIFACTS:
+        files.download(path)
+else:
+    from pathlib import Path
+
+    for path in ARTIFACTS:
+        p = Path(path)
+        print(f"{path}: {'есть' if p.exists() else 'НЕТ'}"
+              f"{f' ({p.stat().st_size:,} байт)' if p.exists() else ''}")'''),
 ]
 
 
