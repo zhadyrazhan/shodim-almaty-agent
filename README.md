@@ -75,30 +75,18 @@ Now Runtime → Run all. Scraping and extraction take a few minutes (57 chunks t
 
 ### ORPO training (bonus)
 
-Runtime → Change runtime type → **T4 GPU**, then Runtime → Restart session. Changing the type alone doesn't move you onto GPU hardware — you need the restart.
+Open **`orpo_training.ipynb`** in Colab — it's self-contained (clones the repo, installs everything, checks the GPU) and walks the whole bonus track: preference pairs → training → before/after comparison.
+
+Runtime → Change runtime type → **T4 GPU**, then Runtime → **Restart session**. Changing the type alone doesn't move you onto GPU hardware; the notebook's second cell fails loudly if you skip the restart, because Colab silently hands you CPU when you're over quota.
+
+Then Runtime → Run all. Watch that the loss falls **and** `rewards/margins` grows — margins are what tell you the model is separating the friendly answer from the curt one, rather than just fitting both.
+
+To run the pieces by hand instead:
 
 ```python
-!git clone -b feat/sft-orpo https://github.com/zhadyrazhan/shodim-almaty-agent.git
-%cd shodim-almaty-agent
-!pip install -q -r requirements.txt
-!pip install -q unsloth unsloth_zoo trl peft accelerate bitsandbytes datasets
+!python training/build_preference_data.py --n 120   # API only, no GPU
+!python training/train_orpo.py --pairs data/preference_data.json --epochs 3
 ```
-
-Verify you actually got a GPU before training — Colab silently falls back to CPU when you're over quota:
-
-```python
-!nvidia-smi
-import torch; print("CUDA:", torch.cuda.is_available())
-```
-
-Then build the preference pairs (API, no GPU) and train:
-
-```python
-!python training/build_preference_data.py --n 120
-!python training/train_orpo.py --pairs data/preference_data.json
-```
-
-Watch that the loss falls **and** `rewards/margins` grows — margins are what tell you the model is actually separating the friendly answer from the curt one, rather than just fitting both.
 
 To serve the result, export the merged model to GGUF, import it into Ollama, and point the agent at it:
 
