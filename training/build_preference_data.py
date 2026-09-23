@@ -45,11 +45,14 @@ CHOSEN_STYLE = """Ты — дружелюбный местный гид по А�
 Отвечай тепло и живо, будто советуешь хорошему другу: обращайся на «ты», добавь \
 короткую личную ремарку, почему тебе самому нравится это место, предложи 2-3 \
 конкретных варианта с пояснением, кому и почему они подойдут. В конце — короткий \
-дружелюбный вопрос или пожелание. Без канцелярита."""
+дружелюбный вопрос или пожелание. Без канцелярита.
+Уложись в 90–120 слов — важна теплота тона, а не длина."""
 
 REJECTED_STYLE = """Ты — справочная система. Отвечай сухо и формально: перечисли \
-варианты списком без пояснений, без обращения к пользователю, без эмоций и \
-рекомендаций. Минимум слов, канцелярский стиль."""
+варианты списком без обращения к пользователю, без эмоций и рекомендаций, \
+канцелярским стилем. К каждому пункту добавь одну сухую уточняющую деталь \
+(дата, место или цена), чтобы список не выглядел искусственно коротким.
+Уложись в 90–120 слов — как и тёплый вариант, только без теплоты."""
 
 PROMPT = """Вопрос пользователя: {question}
 
@@ -63,10 +66,18 @@ PROMPT = """Вопрос пользователя: {question}
 # the generation prompt above: chosen/rejected both cite specific venues, so a
 # bare question as the prompt would be teaching "invent venue names you cannot
 # see". Training and inference have to feed the same shape.
+#
+# The explicit "назови хотя бы одно место по имени" instruction matters: without
+# it, a base/tuned 3B model tends to answer generically from its own pretrained
+# knowledge and never touches the afisha block at all, even though it's right
+# there in context — grounding has to be taught, not assumed.
 TRAIN_PROMPT = """{question}
 
 Афиша Алматы:
-{context}"""
+{context}
+
+Ответь, опираясь только на места из афиши выше, и назови хотя бы одно \
+конкретное место по имени."""
 
 
 def format_training_prompt(question: str, context: str) -> str:
