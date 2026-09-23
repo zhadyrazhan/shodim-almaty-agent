@@ -1,0 +1,103 @@
+"""ORPO fine-tuning to make the agent's answers friendlier (project bonus).
+
+ORPO (Odds Ratio Preference Optimization) combines SFT and preference alignment
+in one pass — no separate reward model and no reference model in memory, which
+is what makes it fit on a single free-tier GPU.
+
+Needs CUDA. Run on Colab (T4 is enough for Qwen2.5-3B in 4-bit):
+
+    python training/train_orpo.py --pairs data/preference_data.json
+
+Afterwards, serve the merged model through Ollama and point the agent at it:
+
+    LLM_BACKEND=ollama OLLAMA_MODEL=qwen-almaty
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+
+DEFAULT_MODEL = "unsloth/Qwen2.5-3B-Instruct-bnb-4bit"
+DEFAULT_PAIRS = Path(__file__).parent.parent / "data" / "preference_data.json"
+
+
+def load_pairs(path: Path):
+    from datasets import Dataset
+
+    pairs = json.loads(path.read_text(encoding="utf-8"))
+    if not pairs:
+        raise RuntimeError(f"{path} is empty — run training/build_preference_data.py first")
+    print(f"loaded {len(pairs)} preference pairs")
+    return Dataset.from_list(pairs)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--pairs", type=Path, default=DEFAULT_PAIRS)
+    parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--out", default="outputs/orpo-almaty")
+    parser.add_argument("--epochs", type=float, default=3.0)
+    parser.add_argument("--beta", type=float, default=0.1, help="ORPO lambda / odds-ratio weight")
+    args = parser.parse_args()
+
+    import torch
+    from trl import ORPOConfig, ORPOTrainer
+    from unsloth import FastLanguageModel
+
+    if not torch.cuda.is_available():
+        raise SystemExit("CUDA not available — ORPO training needs a GPU runtime")
+
+    dataset = load_pairs(args.pairs)
+
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name=args.model,
+        max_seq_length=2048,
+        load_in_4bit=True,
+    )
+    model = FastLanguageModel.get_peft_model(
+        model,
+        r=16,
+        target_modules=[
+            "q_proj", "k_proj", "v_proj", "o_proj",
+            "gate_proj", "up_proj", "down_proj",
+        ],
+        lora_alpha=16,
+        lora_dropout=0,
+        bias="none",
+        random_state=42,
+    )
+
+    trainer = ORPOTrainer(
+        model=model,
+        tokenizer=tokenizer,
+        train_dataset=dataset,
+        args=ORPOConfig(
+            output_dir=args.out,
+            per_device_train_batch_size=2,
+            gradient_accumulation_steps=4,
+            num_train_epochs=args.epochs,
+            learning_rate=8e-6,   # preference tuning wants a much lower LR than SFT
+            beta=args.beta,
+            max_length=1024,
+            max_prompt_length=256,
+            logging_steps=10,
+            optim="adamw_8bit",
+            fp16=not torch.cuda.is_bf16_supported(),
+            bf16=torch.cuda.is_bf16_supported(),
+            report_to="none",
+            seed=42,
+        ),
+    )
+
+    print("training ORPO — watch that loss decreases and rewards/margins grows")
+    trainer.train()
+
+    model.save_pretrained(args.out)
+    tokenizer.save_pretrained(args.out)
+    print(f"saved adapter to {args.out}")
+
+
+if __name__ == "__main__":
+    main()
