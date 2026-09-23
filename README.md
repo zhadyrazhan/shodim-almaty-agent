@@ -49,6 +49,65 @@ The scrape and extract steps are separate on purpose: extraction re-reads the ca
 
 ---
 
+## Running on Colab
+
+Two things are worth doing in Colab: running the notebook (if you don't want a local Python setup), and the ORPO training (which needs a GPU).
+
+### The notebook
+
+Runtime → **CPU is fine**. The notebook imports from `src/`, so clone the repo first rather than uploading the `.ipynb` alone:
+
+```python
+!git clone https://github.com/zhadyrazhan/shodim-almaty-agent.git
+%cd shodim-almaty-agent
+!pip install -q -r requirements.txt
+```
+
+Add your key via the Secrets panel (🔑 in the left sidebar) as `OPENAI_API_KEY`, then:
+
+```python
+import os
+from google.colab import userdata
+os.environ["OPENAI_API_KEY"] = userdata.get("OPENAI_API_KEY")
+```
+
+Now Runtime → Run all. Scraping and extraction take a few minutes (57 chunks through the API). Download `sxodim_agent.ipynb` **with outputs saved** plus `data/sxodim_data.json` and `agent_examples.md`.
+
+### ORPO training (bonus)
+
+Runtime → Change runtime type → **T4 GPU**, then Runtime → Restart session. Changing the type alone doesn't move you onto GPU hardware — you need the restart.
+
+```python
+!git clone -b feat/sft-orpo https://github.com/zhadyrazhan/shodim-almaty-agent.git
+%cd shodim-almaty-agent
+!pip install -q -r requirements.txt
+!pip install -q unsloth unsloth_zoo trl peft accelerate bitsandbytes datasets
+```
+
+Verify you actually got a GPU before training — Colab silently falls back to CPU when you're over quota:
+
+```python
+!nvidia-smi
+import torch; print("CUDA:", torch.cuda.is_available())
+```
+
+Then build the preference pairs (API, no GPU) and train:
+
+```python
+!python training/build_preference_data.py --n 120
+!python training/train_orpo.py --pairs data/preference_data.json
+```
+
+Watch that the loss falls **and** `rewards/margins` grows — margins are what tell you the model is actually separating the friendly answer from the curt one, rather than just fitting both.
+
+To serve the result, export the merged model to GGUF, import it into Ollama, and point the agent at it:
+
+```bash
+LLM_BACKEND=ollama OLLAMA_MODEL=qwen-almaty uvicorn webapp.server:app
+```
+
+---
+
 ## How it works
 
 **1. Scrape** (`src/scraper.py`) — pulls four sxodim.com pages (afisha, weekend, places, main) through Jina Reader and caches the markdown under `data/raw/`.

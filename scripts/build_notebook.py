@@ -90,15 +90,6 @@ for q, a in answers.items():
     "".join(lines), encoding="utf-8"
 )
 print(f"сохранено {len(answers)} диалогов в agent_examples.md")"""),
-    md("""## Дeliverables (что сдаём)
-
-- [x] `sxodim_agent.ipynb` — этот ноутбук с выводами
-- [x] `data/sxodim_data.json` — спарсенные структурированные данные
-- [x] `agent_examples.md` — 5+ примеров диалогов
-- [x] Вывод парсера виден — секция 1
-- [x] Структурированный JSON виден — секция 2
-- [x] 5 вопросов и ответы — секция 3
-"""),
 ]
 
 
