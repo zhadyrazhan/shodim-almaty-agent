@@ -59,6 +59,21 @@ PROMPT = """Вопрос пользователя: {question}
 {style}"""
 
 
+# What the model is actually trained on. The context MUST be here, not only in
+# the generation prompt above: chosen/rejected both cite specific venues, so a
+# bare question as the prompt would be teaching "invent venue names you cannot
+# see". Training and inference have to feed the same shape.
+TRAIN_PROMPT = """{question}
+
+Афиша Алматы:
+{context}"""
+
+
+def format_training_prompt(question: str, context: str) -> str:
+    """Build the prompt stored in the dataset — reused at eval so both match."""
+    return TRAIN_PROMPT.format(question=question, context=context)
+
+
 def format_records(records: list[dict], k: int = 5) -> str:
     lines = []
     for r in records[:k]:
@@ -98,7 +113,13 @@ def build(n: int, model: str, seed: int = 42) -> list[dict]:
             print(f"  [warn] pair {i + 1} failed: {e}")
             continue
 
-        pairs.append({"prompt": question, "chosen": chosen, "rejected": rejected})
+        pairs.append(
+            {
+                "prompt": format_training_prompt(question, context),
+                "chosen": chosen,
+                "rejected": rejected,
+            }
+        )
         print(f"  [{i + 1}/{n}] {question[:40]}")
 
     return pairs

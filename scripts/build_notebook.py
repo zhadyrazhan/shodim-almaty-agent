@@ -168,18 +168,28 @@ if HAS_GPU:
     print(p["chosen"][:500])
     print("\\n--- REJECTED (сухой) ---")
     print(p["rejected"][:500])'''),
-    md("### 5.2 Ответы ДО обучения"),
+    md("""### 5.2 Ответы ДО обучения
+
+Важно: на вход подаётся **тот же формат**, что и при обучении — вопрос вместе с фрагментом \
+афиши. Если спрашивать голым вопросом, модель физически не сможет назвать конкретные места, \
+и сравнение ДО/ПОСЛЕ ничего не покажет."""),
     code('''if HAS_GPU:
     from unsloth import FastLanguageModel
+
+    from src.agent import load_records
+    from training.build_preference_data import format_records, format_training_prompt
 
     BASE_MODEL = "unsloth/Qwen2.5-3B-Instruct-bnb-4bit"
     model, tok = FastLanguageModel.from_pretrained(
         model_name=BASE_MODEL, max_seq_length=2048, load_in_4bit=True
     )
 
-    def gen(m, t, question, max_new_tokens=220):
+    # Один и тот же срез афиши для ДО и ПОСЛЕ — иначе сравнение нечестное.
+    EVAL_CONTEXT = format_records(load_records()[:8], k=8)
+
+    def gen(m, t, question, max_new_tokens=260):
         prompt = t.apply_chat_template(
-            [{"role": "user", "content": question}],
+            [{"role": "user", "content": format_training_prompt(question, EVAL_CONTEXT)}],
             tokenize=False,
             add_generation_prompt=True,
         )
