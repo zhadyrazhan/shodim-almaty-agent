@@ -1,0 +1,99 @@
+{
+  "description": "Evaluation set for the Sxodim Almaty agent. Listings change daily, so this deliberately does NOT assert specific event names — it asserts behavior that must hold regardless of what is currently playing: the agent recommends from the data, adapts to audience, and refuses what the listings cannot support.",
+  "scoring": {
+    "must_contain_any": "answer must mention at least one of these (case-insensitive)",
+    "must_not_contain": "answer must mention none of these",
+    "expect_refusal": "answer must decline rather than invent",
+    "min_length": "answers shorter than this are non-answers"
+  },
+  "items": [
+    {
+      "id": "weekend",
+      "question": "Куда сходить на выходных?",
+      "category": "brief_question",
+      "expect_refusal": false,
+      "min_length": 60,
+      "must_contain_any": ["выходн", "суббот", "воскрес", "concert", "событи", "мероприят", "мест"],
+      "notes": "From the project brief. Should surface concrete listings, not generic advice."
+    },
+    {
+      "id": "date_spot",
+      "question": "Посоветуй место для свидания",
+      "category": "brief_question",
+      "expect_refusal": false,
+      "min_length": 60,
+      "must_not_contain": ["детск", "для детей"],
+      "notes": "From the brief. Kid-oriented venues would signal good_for is being ignored."
+    },
+    {
+      "id": "with_kid",
+      "question": "Куда сводить ребенка?",
+      "category": "brief_question",
+      "expect_refusal": false,
+      "min_length": 60,
+      "must_not_contain": ["бар", "ночн", "18+", "алкогол"],
+      "notes": "From the brief. Nightlife here is a hard fail."
+    },
+    {
+      "id": "concerts",
+      "question": "Какие концерты будут?",
+      "category": "brief_question",
+      "expect_refusal": false,
+      "min_length": 40,
+      "notes": "From the brief."
+    },
+    {
+      "id": "food",
+      "question": "Где вкусно поесть?",
+      "category": "brief_question",
+      "expect_refusal": false,
+      "min_length": 40,
+      "notes": "From the brief."
+    },
+    {
+      "id": "whats_new",
+      "question": "Что нового открылось в Алматы?",
+      "category": "brief_question",
+      "expect_refusal": false,
+      "min_length": 40,
+      "notes": "From the brief."
+    },
+    {
+      "id": "friends_evening",
+      "question": "Куда пойти с друзьями вечером?",
+      "category": "audience_routing",
+      "expect_refusal": false,
+      "min_length": 60,
+      "notes": "Group audience — should differ from the date-spot answer."
+    },
+    {
+      "id": "free_events",
+      "question": "Есть ли бесплатные мероприятия?",
+      "category": "constraint",
+      "expect_refusal": false,
+      "min_length": 40,
+      "notes": "Either lists free events or says the listings do not show any. Both acceptable."
+    },
+    {
+      "id": "offtopic_weather",
+      "question": "Какая завтра погода в Алматы?",
+      "category": "off_topic",
+      "expect_refusal": true,
+      "notes": "Not in the listings. Must decline instead of inventing a forecast."
+    },
+    {
+      "id": "offtopic_other_city",
+      "question": "Куда сходить в Париже на выходных?",
+      "category": "off_topic",
+      "expect_refusal": true,
+      "notes": "Wrong city entirely. The agent only has Almaty listings."
+    },
+    {
+      "id": "offtopic_flight",
+      "question": "Сколько стоит билет на самолет до Астаны?",
+      "category": "off_topic",
+      "expect_refusal": true,
+      "notes": "Ticket prices for flights are not event listings."
+    }
+  ]
+}
