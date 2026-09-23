@@ -32,10 +32,41 @@ CELLS = [
 **Пайплайн:** sxodim.com → Jina Reader → GPT-5-mini (структурирование) → LlamaIndex RAG → агент
 
 Логика живёт в `src/`, ноутбук её импортирует — так код не дублируется между `.py` и `.ipynb`.
-
-**Перед запуском:** `pip install -r requirements.txt`, ключ `OPENAI_API_KEY` в `.env`.
 """),
-    md("## 0. Настройка"),
+    md("""## 0. Настройка
+
+**В Colab** достаточно запустить ячейку ниже — она клонирует репозиторий (ноутбук импортирует из `src/`, \
+поэтому одного `.ipynb` недостаточно), поставит зависимости и возьмёт ключ из панели Secrets (🔑 слева). \
+Добавь туда `OPENAI_API_KEY` до запуска. GPU не нужен — хватит CPU runtime.
+
+**Локально** ячейка ничего не делает: нужен `pip install -r requirements.txt` и `OPENAI_API_KEY` в `.env`.
+"""),
+    code('''REPO_URL = "https://github.com/zhadyrazhan/shodim-almaty-agent.git"
+
+try:
+    import google.colab  # noqa: F401
+    IN_COLAB = True
+except ImportError:
+    IN_COLAB = False
+
+if IN_COLAB:
+    import os
+    import subprocess
+    from pathlib import Path
+
+    if not Path("shodim-almaty-agent").exists():
+        subprocess.run(["git", "clone", "-q", REPO_URL], check=True)
+    if Path("shodim-almaty-agent").exists():
+        os.chdir("shodim-almaty-agent")
+
+    subprocess.run(["pip", "install", "-q", "-r", "requirements.txt"], check=True)
+
+    from google.colab import userdata
+
+    os.environ["OPENAI_API_KEY"] = userdata.get("OPENAI_API_KEY")
+    print("Colab: репозиторий и зависимости готовы, ключ загружен")
+else:
+    print("Локальный запуск — ключ берётся из .env")'''),
     code("""import json
 
 from src import scraper, extract, agent
