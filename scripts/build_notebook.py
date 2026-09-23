@@ -203,8 +203,21 @@ if HAS_GPU:
         print(f"Q: {q}\\nA: {a}\\n{'-' * 70}")'''),
     md("""### 5.3 Обучение
 
+Сначала выгружаем модель из памяти ноутбука: обучение запускается отдельным процессом и \
+грузит Qwen заново, а две копии 3B-модели на T4 (14 ГБ) не помещаются — получите OOM.
+
 Следим не только за падением loss, но и за **`rewards/margins`**: именно рост маржи \
 показывает, что модель разводит тёплый и сухой ответы, а не просто подгоняется под оба."""),
+    code('''if HAS_GPU:
+    import gc
+
+    for name in ("model", "tok"):
+        if name in globals():
+            del globals()[name]
+    gc.collect()
+    torch.cuda.empty_cache()
+    free, total = torch.cuda.mem_get_info()
+    print(f"свободно на GPU: {free / 1e9:.1f} / {total / 1e9:.1f} ГБ")'''),
     code("""if HAS_GPU:
     !python training/train_orpo.py --pairs data/preference_data.json --epochs 3"""),
     md("### 5.4 Ответы ПОСЛЕ обучения"),

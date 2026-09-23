@@ -72,6 +72,11 @@ def main() -> None:
         lora_alpha=16,
         lora_dropout=0,
         bias="none",
+        # Recompute activations instead of storing them. ORPO forwards both the
+        # chosen and rejected sequence, so activation memory is roughly doubled
+        # versus plain SFT — on a 14 GB T4 that is the difference between
+        # training and an OOM.
+        use_gradient_checkpointing="unsloth",
         random_state=42,
     )
 
@@ -82,8 +87,11 @@ def main() -> None:
         train_dataset=dataset,
         args=ORPOConfig(
             output_dir=args.out,
-            per_device_train_batch_size=2,
-            gradient_accumulation_steps=4,
+            # Effective batch stays 8; the split is 1x8 rather than 2x4 because
+            # prompts now carry the afisha context and are several hundred
+            # tokens longer than they used to be.
+            per_device_train_batch_size=1,
+            gradient_accumulation_steps=8,
             num_train_epochs=args.epochs,
             learning_rate=8e-6,   # preference tuning wants a much lower LR than SFT
             beta=args.beta,
