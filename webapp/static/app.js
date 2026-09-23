@@ -6,64 +6,13 @@ const STARTER_QUESTIONS = [
   "Где вкусно поесть?",
 ];
 
-const THEME_KEY = "sxodim-theme";
-
 const messagesEl = document.getElementById("messages");
 const emptyStateEl = document.getElementById("empty-state");
 const composerEl = document.getElementById("composer");
 const inputEl = document.getElementById("input");
 const sendBtn = document.getElementById("send");
 const chipsEl = document.getElementById("chips");
-const statusEl = document.getElementById("status");
-const statusTextEl = document.getElementById("status-text");
-const themeToggle = document.getElementById("theme-toggle");
 
-/* --- theme ---------------------------------------------------------------- */
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  try {
-    localStorage.setItem(THEME_KEY, theme);
-  } catch {
-    // Private browsing or blocked storage — the toggle still works per-session.
-  }
-}
-
-function initTheme() {
-  // Dark by default — only an explicit toggle switches to light, so the app
-  // looks the same regardless of the visitor's OS setting.
-  let saved = null;
-  try {
-    saved = localStorage.getItem(THEME_KEY);
-  } catch {
-    // ignore
-  }
-  applyTheme(saved === "light" ? "light" : "dark");
-}
-
-themeToggle.addEventListener("click", () => {
-  const current = document.documentElement.getAttribute("data-theme");
-  applyTheme(current === "dark" ? "light" : "dark");
-});
-
-/* --- status --------------------------------------------------------------- */
-async function checkHealth() {
-  try {
-    const res = await fetch("/api/health");
-    const data = await res.json();
-    if (data.ready) {
-      statusEl.classList.add("ready");
-      statusTextEl.textContent = `${data.records} мест · ${data.backend}`;
-    } else {
-      statusEl.classList.add("down");
-      statusTextEl.textContent = "нет данных";
-    }
-  } catch {
-    statusEl.classList.add("down");
-    statusTextEl.textContent = "сервер недоступен";
-  }
-}
-
-/* --- chat ----------------------------------------------------------------- */
 function renderChips() {
   for (const q of STARTER_QUESTIONS) {
     const chip = document.createElement("button");
@@ -137,7 +86,5 @@ composerEl.addEventListener("submit", (e) => {
   ask(inputEl.value);
 });
 
-initTheme();
 renderChips();
-checkHealth();
 inputEl.focus();

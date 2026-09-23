@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 
-/* Dark is the default; [data-theme="light"] overrides it. */
+/* Dark only — no theme switching. */
 :root {
   --bg: #0a0f0d;
   --bg-elevated: #101715;
@@ -19,24 +19,6 @@
   --glow: radial-gradient(60% 50% at 50% 0%, rgba(61, 220, 151, 0.12), transparent 70%);
   --radius: 18px;
   --radius-sm: 11px;
-}
-
-:root[data-theme="light"] {
-  --bg: #f6f8f7;
-  --bg-elevated: #ffffff;
-  --panel: #ffffff;
-  --panel-2: #f1f5f3;
-  --border: #dde5e1;
-  --border-soft: #e8eeeb;
-  --text: #16201c;
-  --text-dim: #5b6863;
-  --text-faint: #93a09a;
-  --accent: #149b64;
-  --accent-strong: #0f7d50;
-  --accent-contrast: #ffffff;
-  --danger: #c0392b;
-  --danger-bg: rgba(192, 57, 43, 0.08);
-  --glow: radial-gradient(60% 50% at 50% 0%, rgba(20, 155, 100, 0.10), transparent 70%);
 }
 
 html, body { height: 100%; }
@@ -70,58 +52,6 @@ body {
 }
 
 /* --- header --------------------------------------------------------------- */
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 26px;
-}
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--panel);
-  color: var(--text-dim);
-  font-size: 12.5px;
-}
-
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--text-faint);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
-}
-
-.status.ready .status-dot { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-.status.down .status-dot { background: var(--danger); box-shadow: 0 0 8px var(--danger); }
-
-.theme-toggle {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--panel);
-  color: var(--text-dim);
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
-}
-
-.theme-toggle:hover { color: var(--text); border-color: var(--accent); }
-.theme-toggle:active { transform: scale(0.94); }
-
-/* Show the icon for the theme you'd switch TO. */
-:root[data-theme="dark"] .icon-sun { display: block; }
-:root[data-theme="dark"] .icon-moon { display: none; }
-:root[data-theme="light"] .icon-sun { display: none; }
-:root[data-theme="light"] .icon-moon { display: block; }
-
 .header { text-align: center; }
 
 .header h1 {
