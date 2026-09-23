@@ -99,6 +99,15 @@ def main() -> None:
             # prompt + completion together.
             max_length=1024,
             logging_steps=10,
+            # Left at its default, this forks worker processes (num_proc = CPU
+            # count, 2 on a Colab T4 box) to tokenize the dataset — but by this
+            # point the 4-bit model is already loaded and CUDA is already
+            # initialized in the parent process. Forking after that can leave
+            # a duplicated/orphaned CUDA context in the child, which silently
+            # eats several GB of VRAM the trainer itself never allocated and
+            # was the actual cause of the "OOM on a 352 MiB alloc while GPU is
+            # basically empty" crash, not the training step itself.
+            dataset_num_proc=1,
             optim="adamw_8bit",
             fp16=not torch.cuda.is_bf16_supported(),
             bf16=torch.cuda.is_bf16_supported(),
