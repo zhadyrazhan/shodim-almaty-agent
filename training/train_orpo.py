@@ -43,8 +43,14 @@ def main() -> None:
     args = parser.parse_args()
 
     import torch
-    from trl import ORPOConfig, ORPOTrainer
     from unsloth import FastLanguageModel
+
+    # TRL moved ORPO under trl.experimental in recent releases; fall back to the
+    # top-level import so this works on either version.
+    try:
+        from trl.experimental.orpo import ORPOConfig, ORPOTrainer
+    except ImportError:
+        from trl import ORPOConfig, ORPOTrainer
 
     if not torch.cuda.is_available():
         raise SystemExit("CUDA not available — ORPO training needs a GPU runtime")
@@ -71,7 +77,8 @@ def main() -> None:
 
     trainer = ORPOTrainer(
         model=model,
-        tokenizer=tokenizer,
+        # `tokenizer=` was renamed to `processing_class=` across TRL trainers.
+        processing_class=tokenizer,
         train_dataset=dataset,
         args=ORPOConfig(
             output_dir=args.out,
@@ -80,8 +87,9 @@ def main() -> None:
             num_train_epochs=args.epochs,
             learning_rate=8e-6,   # preference tuning wants a much lower LR than SFT
             beta=args.beta,
+            # ORPOConfig has no max_prompt_length — max_length covers
+            # prompt + completion together.
             max_length=1024,
-            max_prompt_length=256,
             logging_steps=10,
             optim="adamw_8bit",
             fp16=not torch.cuda.is_bf16_supported(),
